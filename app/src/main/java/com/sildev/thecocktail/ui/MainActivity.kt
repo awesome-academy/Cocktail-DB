@@ -1,12 +1,13 @@
 package com.sildev.thecocktail.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sildev.thecocktail.R
+import com.sildev.thecocktail.base.BaseActivity
+import com.sildev.thecocktail.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
+
     }
 }

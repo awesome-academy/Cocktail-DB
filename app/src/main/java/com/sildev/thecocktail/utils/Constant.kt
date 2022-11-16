@@ -1,5 +1,5 @@
 package com.sildev.thecocktail.utils
 
 object Constant{
-    //Do late
+    const val ROOM_VERSION = 1
 }

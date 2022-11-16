@@ -6,7 +6,7 @@ jobs:
     stage: check
     image: 30121999/sunci-detekt:latest
     cache:
-      - key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+      - key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
         paths:
           - ./gradle
     before_script:
