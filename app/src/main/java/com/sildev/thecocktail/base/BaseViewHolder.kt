@@ -4,8 +4,20 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 
 abstract class BaseViewHolder<T, VB : ViewBinding>(
-    open val binding: VB
+    private val binding: VB, click: (T) -> Unit = { _ -> }
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    abstract fun onBindData(data: T)
+    private var itemData: T? = null
+
+    init {
+        itemView.setOnClickListener {
+            itemData?.let {
+                click(it)
+            }
+        }
+    }
+
+    open fun onBindData(data: T) {
+        itemData = data
+    }
 }

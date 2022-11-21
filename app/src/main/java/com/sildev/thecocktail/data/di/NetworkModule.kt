@@ -13,7 +13,7 @@ val networkModule = module {
 
     single { provideRetrofit(get()) }
 
-    single { provideMealService(get()) }
+    single { provideDrinkService(get()) }
 }
 
 private fun provideOkHttpClient(): OkHttpClient {
@@ -32,6 +32,6 @@ private fun provideRetrofit(client: OkHttpClient): Retrofit {
         .build()
 }
 
-private fun provideMealService(retrofit: Retrofit): ApiService {
+private fun provideDrinkService(retrofit: Retrofit): ApiService {
     return retrofit.create(ApiService::class.java)
 }

@@ -1,13 +1,16 @@
 package com.sildev.thecocktail.data.model
 
-class DrinkResponse {
-    val drinks: List<DrinkResponse>? = null
-}
+import com.google.gson.annotations.SerializedName
 
-class CategoryResponse {
-    val categories: List<Category>? = null
-}
+class DrinkResponse(
+    val drinks: List<Drink>
+)
 
-class IngredientResponse {
-    val ingredients: List<Ingredient>? = null
-}
+class CategoryResponse(
+    val categories: List<Category>
+)
+
+class IngredientResponse(
+    @SerializedName("drinks")
+    val ingredients: List<Ingredient>
+)
