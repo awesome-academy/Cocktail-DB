@@ -22,6 +22,7 @@ class DrinkAdapter(private val onclickItem: (Drink) -> Unit) :
         private val itemBinding: ItemDrinkBinding, onclickItem: (Drink) -> Unit
     ) : BaseViewHolder<Drink, ItemDrinkBinding>(itemBinding, onclickItem) {
         override fun onBindData(data: Drink) {
+            super.onBindData(data)
             itemBinding.textNameDrink.text = data.strDrink
             itemBinding.imageDrink.loadImage(
                 data.strDrinkThumb

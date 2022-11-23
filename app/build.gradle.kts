@@ -38,12 +38,10 @@ android {
         create("dev") {
             dimension = "server"
             applicationIdSuffix = ".dev"
-            resValue("string", "app_name", "Movie DB Dev")
             buildConfigField("boolean", "MOCK_DATA", "true")
         }
         create("prd") {
             dimension = "server"
-            resValue("string", "app_name", "Movie DB")
             buildConfigField("boolean", "MOCK_DATA", "false")
         }
     }

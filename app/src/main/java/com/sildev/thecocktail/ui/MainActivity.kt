@@ -8,23 +8,31 @@ import com.sildev.thecocktail.ui.category.CategoryFragment
 import com.sildev.thecocktail.ui.discovery.DiscoveryFragment
 import com.sildev.thecocktail.ui.favourite.FavouriteFragment
 import com.sildev.thecocktail.ui.setting.SettingFragment
-import com.sildev.thecocktail.utils.extension.replaceFragment
+import com.sildev.thecocktail.utils.extension.addFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        replaceFragment(DiscoveryFragment())
+        addFragment(R.id.fragment_container_home, DiscoveryFragment())
         binding.navHome.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.item_category -> replaceFragment(CategoryFragment())
-                R.id.item_discovery -> replaceFragment(DiscoveryFragment())
-                R.id.item_favourite -> replaceFragment(FavouriteFragment())
-                R.id.item_setting -> replaceFragment(SettingFragment())
+                R.id.item_category -> addFragment(
+                    R.id.fragment_container_home, CategoryFragment()
+                )
+                R.id.item_discovery -> addFragment(
+                    R.id.fragment_container_home, DiscoveryFragment()
+                )
+                R.id.item_favourite -> addFragment(
+                    R.id.fragment_container_home, FavouriteFragment()
+                )
+                R.id.item_setting -> addFragment(
+                    R.id.fragment_container_home, SettingFragment()
+                )
             }
             true
         }
-        binding.navHome.setOnItemReselectedListener {  }
+        binding.navHome.setOnItemReselectedListener { }
     }
 
 }

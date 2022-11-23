@@ -21,7 +21,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class DiscoveryFragment :
     BaseFragment<FragmentDiscoveryBinding>(FragmentDiscoveryBinding::inflate) {
 
-    private val viewModel: DiscoveryViewModel by viewModel()
+    override val viewModel: DiscoveryViewModel by viewModel()
     private val ingredientAdapter = IngredientAdapter(::onClickIngredientItem)
     private val drinkAdapter = DrinkAdapter(::onClickDrinkItem)
 
