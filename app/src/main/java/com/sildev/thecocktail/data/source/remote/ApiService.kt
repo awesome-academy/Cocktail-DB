@@ -15,7 +15,7 @@ interface ApiService {
     suspend fun getCockTailDrink(): DrinkResponse
 
     @GET("search.php")
-    suspend fun getMealByName(@Query("s") name: String): DrinkResponse
+    suspend fun getDrinkByName(@Query("s") name: String): DrinkResponse
 
     @GET("list.php?c=list")
     suspend fun getCategory(): CategoryResponse

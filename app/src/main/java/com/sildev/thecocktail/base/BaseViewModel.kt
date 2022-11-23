@@ -9,7 +9,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 abstract class BaseViewModel : ViewModel() {
-
+    private val _error = MutableLiveData<String>()
+    val error: LiveData<String>
+        get() = _error
     private val _isShowLoading = MutableLiveData(false)
     val isShowLoading: LiveData<Boolean> get() = _isShowLoading
 

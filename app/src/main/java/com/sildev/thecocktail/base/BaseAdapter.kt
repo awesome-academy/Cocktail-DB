@@ -15,8 +15,6 @@ abstract class BaseAdapter<T, VB : ViewBinding, VH : BaseViewHolder<T, VB>>(
 ) {
 
     override fun onBindViewHolder(holder: VH, position: Int) {
-        if (position < currentList.size) {
-            holder.onBindData(getItem(position))
-        }
+        holder.onBindData(getItem(position))
     }
 }

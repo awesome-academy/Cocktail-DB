@@ -9,4 +9,8 @@
     <string name="see_more">See more</string>
     <string name="cocktail">Cocktail</string>
     <string name="what_to_drink_today">What to drink today?</string>
+    <string name="delete_search_history">Delete search history</string>
+    <string name="question_delete">Do you want delete your search history?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
 </resources>
