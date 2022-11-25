@@ -17,12 +17,11 @@ import com.sildev.thecocktail.utils.Constant.EMPTY_STRING
 import com.sildev.thecocktail.utils.Constant.EXTRA_DRINK_DATA_KEY
 import com.sildev.thecocktail.utils.extension.setInvisible
 import com.sildev.thecocktail.utils.extension.setVisible
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import java.util.*
 
 class SearchActivity : BaseActivity<ActivitySearchBinding>(ActivitySearchBinding::inflate) {
 

@@ -11,5 +11,7 @@ object Constant {
     const val TIME_DELAY_SEARCH = 500L
     const val EXTRA_INGREDIENT_DATA_KEY = "EXTRA_INGREDIENT_DATA_KEY"
     const val EXTRA_DRINK_DATA_KEY = "EXTRA_DRINK_DATA_KEY"
+    const val EXTRA_CATEGORY_DATA_KEY = "EXTRA_DRINK_DATA_KEY"
     const val EMPTY_STRING = " "
+    const val SPAN_COUNT_CATEGORY = 2
 }
