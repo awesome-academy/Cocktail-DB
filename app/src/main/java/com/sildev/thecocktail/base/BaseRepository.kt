@@ -6,7 +6,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.IOException
 
-class BaseRepository {
+open class BaseRepository {
 
     suspend fun <T> getResult(request: suspend CoroutineScope.() -> T): DataResult<T> {
         return withContext(Dispatchers.IO) {

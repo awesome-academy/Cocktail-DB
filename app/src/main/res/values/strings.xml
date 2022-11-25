@@ -12,5 +12,6 @@
     <string name="delete_search_history">Delete search history</string>
     <string name="question_delete">Do you want delete your search history?</string>
     <string name="yes">Yes</string>
+    <string name="empty">Empty</string>
     <string name="cancel">Cancel</string>
 </resources>

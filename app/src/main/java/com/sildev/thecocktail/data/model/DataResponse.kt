@@ -7,6 +7,7 @@ class DrinkResponse(
 )
 
 class CategoryResponse(
+    @SerializedName("drinks")
     val categories: List<Category>
 )
 
