@@ -24,6 +24,7 @@ class IngredientAdapter(private val onclickItem: (Ingredient) -> Unit) :
         private val itemBinding: ItemIngredientBinding, onclickItem: (Ingredient) -> Unit
     ) : BaseViewHolder<Ingredient, ItemIngredientBinding>(itemBinding, onclickItem) {
         override fun onBindData(data: Ingredient) {
+            super.onBindData(data)
             itemBinding.textCategory.text = data.name
             itemBinding.imageCategory.loadImage(
                 Constant.BASE_INGREDIENT_IMAGE + data.name + Constant.MEDIUM_PNG_EXTENSION

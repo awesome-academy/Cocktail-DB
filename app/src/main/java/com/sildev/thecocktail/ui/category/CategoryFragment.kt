@@ -11,8 +11,8 @@ import com.sildev.thecocktail.R
 import com.sildev.thecocktail.base.BaseFragment
 import com.sildev.thecocktail.data.model.Category
 import com.sildev.thecocktail.databinding.FragmentCategoryBinding
-import com.sildev.thecocktail.ui.SeeAllActivity
 import com.sildev.thecocktail.ui.adapter.CategoryAdapter
+import com.sildev.thecocktail.ui.drinks.DrinksActivity
 import com.sildev.thecocktail.utils.Constant
 import com.sildev.thecocktail.utils.extension.setInvisible
 import com.sildev.thecocktail.utils.extension.setVisible
@@ -40,6 +40,21 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(FragmentCategoryB
                 binding.imageTypeView.setImageResource(R.drawable.ic_list)
             }
             gridDisplay = gridDisplay.not()
+
+        }
+        viewModel.categoryList.observe(viewLifecycleOwner) {
+            categoryAdapter.submitList(it)
+            listCategory.apply {
+                clear()
+                addAll(it)
+            }
+            binding.shimmerCategory.hideShimmer()
+            binding.shimmerCategory.setInvisible()
+            if (it.isEmpty()) {
+                binding.textEmpty.setVisible()
+            } else {
+                binding.textEmpty.setInvisible()
+            }
         }
         binding.editSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -61,26 +76,11 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(FragmentCategoryB
                 }
             }
         })
-
-
-        viewModel.categoryList.observe(viewLifecycleOwner) {
-            categoryAdapter.submitList(it)
-            listCategory.apply {
-                clear()
-                addAll(it)
-            }
-            binding.shimmerCategory.hideShimmer()
-            binding.shimmerCategory.setInvisible()
-            if (it.isEmpty()) {
-                binding.textEmpty.setVisible()
-            } else {
-                binding.textEmpty.setInvisible()
-            }
-        }
     }
 
     private fun onClickCategoryItem(category: Category) {
-        val intent = Intent(context, SeeAllActivity::class.java)
+        val intent = Intent(context, DrinksActivity::class.java)
+        intent.putExtra(Constant.EXTRA_TYPE_KEY, Constant.TYPE_CATEGORY)
         intent.putExtra(Constant.EXTRA_CATEGORY_DATA_KEY, category)
         startActivity(intent)
     }

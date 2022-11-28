@@ -87,13 +87,14 @@
             app:layout_constraintTop_toBottomOf="@id/shimmer_suggest" />
 
         <TextView
+            android:id="@+id/text_see_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20dp"
             android:text="@string/see_more"
-            android:id="@+id/text_see_more"
             android:textColor="@color/color_blue"
             android:textSize="@dimen/text_size_normal"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/text_ingredients"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/shimmer_suggest" />

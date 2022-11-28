@@ -9,13 +9,16 @@ import com.sildev.thecocktail.base.BaseFragment
 import com.sildev.thecocktail.data.model.Drink
 import com.sildev.thecocktail.data.model.Ingredient
 import com.sildev.thecocktail.databinding.FragmentDiscoveryBinding
-import com.sildev.thecocktail.ui.SeeAllActivity
 import com.sildev.thecocktail.ui.adapter.DrinkAdapter
 import com.sildev.thecocktail.ui.adapter.IngredientAdapter
 import com.sildev.thecocktail.ui.detail.DetailActivity
+import com.sildev.thecocktail.ui.drinks.DrinksActivity
 import com.sildev.thecocktail.ui.search.SearchActivity
+import com.sildev.thecocktail.ui.seeall.SeeAllActivity
 import com.sildev.thecocktail.utils.Constant
+import com.sildev.thecocktail.utils.Constant.EXTRA_INGREDIENT_LIST_DATA_KEY
 import com.sildev.thecocktail.utils.extension.loadImage
+import com.sildev.thecocktail.utils.extension.setVisible
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DiscoveryFragment :
@@ -24,6 +27,7 @@ class DiscoveryFragment :
     override val viewModel: DiscoveryViewModel by viewModel()
     private val ingredientAdapter = IngredientAdapter(::onClickIngredientItem)
     private val drinkAdapter = DrinkAdapter(::onClickDrinkItem)
+    private val listIngredient = mutableListOf<Ingredient>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -32,7 +36,10 @@ class DiscoveryFragment :
             recyclerviewIngredients.adapter = ingredientAdapter
             recyclerviewCocktail.adapter = drinkAdapter
             textSeeMore.setOnClickListener {
-                startActivity(Intent(context, SeeAllActivity::class.java))
+                val intent = Intent(context, SeeAllActivity::class.java)
+                val ingredientData = Ingredient.fromListIngredient(listIngredient)
+                intent.putExtra(EXTRA_INGREDIENT_LIST_DATA_KEY, ingredientData)
+                startActivity(intent)
             }
             layoutSearch.setOnClickListener {
                 startActivity(Intent(context, SearchActivity::class.java))
@@ -52,8 +59,10 @@ class DiscoveryFragment :
 
         })
         viewModel.ingredient.observe(viewLifecycleOwner, Observer {
+            listIngredient.addAll(it)
             ingredientAdapter.submitList(it.subList(Constant.FIRST_INDEX, Constant.INGREDIENT_SIZE))
             binding.shimmerIngredients.isVisible = false
+            binding.textSeeMore.setVisible()
         })
         viewModel.cocktails.observe(viewLifecycleOwner, Observer {
             drinkAdapter.submitList(it)
@@ -63,8 +72,9 @@ class DiscoveryFragment :
     }
 
     private fun onClickIngredientItem(ingredient: Ingredient) {
-        val intent = Intent(context, SeeAllActivity::class.java)
+        val intent = Intent(context, DrinksActivity::class.java)
         intent.putExtra(Constant.EXTRA_INGREDIENT_DATA_KEY, ingredient)
+        intent.putExtra(Constant.EXTRA_TYPE_KEY, Constant.TYPE_INGREDIENT)
         startActivity(intent)
     }
 

@@ -3,25 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="@dimen/_10dp">
+    android:layout_margin="@dimen/_10dp">
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/image_drink"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_150dp"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:riv_corner_radius="@dimen/_20dp" />
 
     <TextView
         android:id="@+id/text_name_drink"
-        android:layout_width="@dimen/_150dp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_150dp"
         android:background="@drawable/background_gradient"
         android:ellipsize="end"
         android:gravity="bottom|center_horizontal"
         android:maxLines="1"
         android:padding="@dimen/_10dp"
+        android:textStyle="bold"
         android:textColor="@color/color_primary"
         app:layout_constraintStart_toStartOf="@id/image_drink"
         app:layout_constraintTop_toTopOf="@id/image_drink" />

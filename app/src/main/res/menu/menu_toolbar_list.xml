@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_type_view"
+        android:icon="@drawable/ic_grid"
+        app:iconTint="@color/color_text_icon"
+        android:title="@string/type"
+        app:showAsAction="ifRoom" />
+</menu>
