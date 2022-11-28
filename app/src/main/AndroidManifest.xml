@@ -16,6 +16,13 @@
         android:theme="@style/Theme.TheCocktail"
         tools:targetApi="31">
         <activity
+            android:name=".ui.drinks.DrinksActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.detail.DetailActivity"
             android:exported="false"
             android:screenOrientation="portrait">
@@ -24,7 +31,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.SeeAllActivity"
+            android:name=".ui.seeall.SeeAllActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -50,8 +57,8 @@
         <activity
             android:name=".ui.SplashActivity"
             android:exported="true"
-            android:theme="@style/SplashTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
