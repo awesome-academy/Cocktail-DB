@@ -12,6 +12,13 @@ import com.sildev.thecocktail.data.source.CategoryDataSource
 import com.sildev.thecocktail.data.source.DiscoveryDataSource
 import com.sildev.thecocktail.data.source.DrinksDateSource
 import com.sildev.thecocktail.data.source.SearchDataSource
+import com.sildev.thecocktail.data.repository.DetailRepository
+import com.sildev.thecocktail.data.repository.FavouriteRepository
+import com.sildev.thecocktail.data.repository.FavouriteRepositoryImplement
+import com.sildev.thecocktail.data.repository.DetailRepositoryImplement
+import com.sildev.thecocktail.data.source.DrinkDetailDataSource
+import com.sildev.thecocktail.data.source.FavouriteDataSource
+
 import org.koin.dsl.module
 
 val RepositoryModule = module {
@@ -19,6 +26,8 @@ val RepositoryModule = module {
     single { provideSearchRepository(get(), get()) }
     single { provideCategoryRepository(get()) }
     single { provideDrinksRepository(get()) }
+    single { provideDetailRepository(get(), get()) }
+    single { provideFavouriteRepository(get()) }
 }
 
 fun provideDiscoveryRepository(remote: DiscoveryDataSource.Remote): DiscoveryRepository {
@@ -26,8 +35,7 @@ fun provideDiscoveryRepository(remote: DiscoveryDataSource.Remote): DiscoveryRep
 }
 
 fun provideSearchRepository(
-    local: SearchDataSource.Local,
-    remote: SearchDataSource.Remote
+    local: SearchDataSource.Local, remote: SearchDataSource.Remote
 ): SearchRepository {
     return SearchRepositoryImplement(local, remote)
 }
@@ -38,4 +46,14 @@ fun provideCategoryRepository(remote: CategoryDataSource.Remote): CategoryReposi
 
 fun provideDrinksRepository(remote: DrinksDateSource.Remote): DrinksRepository {
     return DrinksRepositoryImplement(remote)
+}
+
+fun provideDetailRepository(
+    local: DrinkDetailDataSource.Local, remote: DrinkDetailDataSource.Remote
+): DetailRepository {
+    return DetailRepositoryImplement(local, remote)
+}
+
+fun provideFavouriteRepository(local: FavouriteDataSource.Local): FavouriteRepository {
+    return FavouriteRepositoryImplement(local)
 }

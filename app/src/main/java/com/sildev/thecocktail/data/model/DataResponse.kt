@@ -6,6 +6,10 @@ class DrinkResponse(
     val drinks: List<Drink>
 )
 
+class DrinkDetailResponse(
+    val drinks: List<DrinkDetail>
+)
+
 class CategoryResponse(
     @SerializedName("drinks")
     val categories: List<Category>

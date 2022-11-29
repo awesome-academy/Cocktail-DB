@@ -12,24 +12,10 @@ import kotlinx.parcelize.Parcelize
 )
 @Parcelize
 data class Drink(
-    @PrimaryKey val idDrink: String,
+    @PrimaryKey
+    val idDrink: String,
     val strDrink: String,
-    val strDrinkAlternate: String,
-    val strCategory: String,
-    val strAlcoholic: String,
-    val strInstructions: String,
     val strDrinkThumb: String,
-    val strIngredient1: String,
-    val strIngredient2: String,
-    val strIngredient3: String,
-    val strIngredient4: String,
-    val strIngredient5: String,
-    val strMeasure1: String,
-    val strMeasure2: String,
-    val strMeasure3: String,
-    val strMeasure4: String,
-    val strMeasure5: String,
-    val dateModified: String
 ) : Parcelable {
 
     companion object {
