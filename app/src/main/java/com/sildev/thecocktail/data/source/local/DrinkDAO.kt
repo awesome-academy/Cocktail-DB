@@ -17,8 +17,8 @@ interface DrinkDAO {
     @Query("select * from ${DrinkDatabase.FAVORITE_TABLE}")
     suspend fun getFavoriteDrinks(): List<Drink>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertFavoriteDrink(drink: Drink)
+    @Query("select * from ${DrinkDatabase.FAVORITE_TABLE} where idDrink=:id")
+    suspend fun getFavouriteById(id: String): Drink?
 
     @Delete
     suspend fun deleteFavoriteDrink(drink: Drink)

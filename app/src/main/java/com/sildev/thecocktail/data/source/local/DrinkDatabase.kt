@@ -22,6 +22,6 @@ abstract class DrinkDatabase : RoomDatabase() {
     companion object {
         const val DATABASE_NAME = "DrinkDB"
         const val RECENT_SEARCH_TABLE = "recentSearch"
-        const val FAVORITE_TABLE = "favorite"
+        const val FAVORITE_TABLE = "favoriteDrink"
     }
 }

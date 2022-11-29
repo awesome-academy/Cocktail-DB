@@ -12,6 +12,7 @@ import com.sildev.thecocktail.data.model.Drink
 import com.sildev.thecocktail.data.model.Ingredient
 import com.sildev.thecocktail.databinding.ActivityDrinksBinding
 import com.sildev.thecocktail.ui.adapter.DrinkAdapter
+import com.sildev.thecocktail.ui.detail.DetailActivity
 import com.sildev.thecocktail.utils.Constant
 import com.sildev.thecocktail.utils.Constant.EXTRA_CATEGORY_DATA_KEY
 import com.sildev.thecocktail.utils.Constant.EXTRA_INGREDIENT_DATA_KEY

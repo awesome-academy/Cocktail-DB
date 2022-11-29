@@ -1,8 +1,10 @@
 package com.sildev.thecocktail.di
 
 import com.sildev.thecocktail.ui.category.CategoryViewModel
+import com.sildev.thecocktail.ui.detail.DetailViewModel
 import com.sildev.thecocktail.ui.discovery.DiscoveryViewModel
 import com.sildev.thecocktail.ui.drinks.DrinksViewModel
+import com.sildev.thecocktail.ui.favourite.FavouriteViewModel
 import com.sildev.thecocktail.ui.search.SearchViewModel
 import com.sildev.thecocktail.ui.seeall.SeeAllViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -14,4 +16,6 @@ val ViewModelModule = module {
     viewModel { CategoryViewModel(get()) }
     viewModel { DrinksViewModel(get()) }
     viewModel { SeeAllViewModel() }
+    viewModel { DetailViewModel(get()) }
+    viewModel { FavouriteViewModel(get()) }
 }
