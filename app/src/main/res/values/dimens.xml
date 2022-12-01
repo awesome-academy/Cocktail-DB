@@ -12,6 +12,7 @@
     <dimen name="_150dp">150dp</dimen>
     <dimen name="_200dp">200dp</dimen>
     <dimen name="_250dp">250dp</dimen>
+    <dimen name="_300dp">300dp</dimen>
 
     <dimen name="text_size_normal">16sp</dimen>
     <dimen name="text_size_title">26sp</dimen>

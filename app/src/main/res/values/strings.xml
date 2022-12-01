@@ -16,4 +16,16 @@
     <string name="cancel">Cancel</string>
     <string name="type">Type</string>
     <string name="ingredient">Ingredient</string>
+    <string name="instructions">Instructions</string>
+    <string name="text_empty_favourite">You have no favourite cocktail yet  Press the heart icon on detail drink page to have easier access to your favourite drink.</string>
+    <string name="text_no_favourite_drink">No favourite drinks</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="question_change_mode">Do you want change mode?</string>
+    <string name="question_change_language">Bạn có muốn đổi sang Tiếng Việt?</string>
+    <string name="ok">Ok</string>
+    <string name="internet_alert">Internet Alert</string>
+    <string name="message_internet_alert">Please check your internet connection!</string>
 </resources>

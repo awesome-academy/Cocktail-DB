@@ -12,7 +12,10 @@ import com.sildev.thecocktail.data.source.CategoryDataSource
 import com.sildev.thecocktail.data.source.DiscoveryDataSource
 import com.sildev.thecocktail.data.source.DrinksDateSource
 import com.sildev.thecocktail.data.source.SearchDataSource
+import com.sildev.thecocktail.data.source.SettingDataSource
 import com.sildev.thecocktail.data.repository.DetailRepository
+import com.sildev.thecocktail.data.repository.SettingRepository
+import com.sildev.thecocktail.data.repository.SettingRepositoryImplement
 import com.sildev.thecocktail.data.repository.FavouriteRepository
 import com.sildev.thecocktail.data.repository.FavouriteRepositoryImplement
 import com.sildev.thecocktail.data.repository.DetailRepositoryImplement
@@ -28,6 +31,7 @@ val RepositoryModule = module {
     single { provideDrinksRepository(get()) }
     single { provideDetailRepository(get(), get()) }
     single { provideFavouriteRepository(get()) }
+    single { provideSettingRepository(get()) }
 }
 
 fun provideDiscoveryRepository(remote: DiscoveryDataSource.Remote): DiscoveryRepository {
@@ -56,4 +60,8 @@ fun provideDetailRepository(
 
 fun provideFavouriteRepository(local: FavouriteDataSource.Local): FavouriteRepository {
     return FavouriteRepositoryImplement(local)
+}
+
+fun provideSettingRepository(local: SettingDataSource.Local): SettingRepository {
+    return SettingRepositoryImplement(local)
 }

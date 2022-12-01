@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="color_primary">#FF000000</color>
-    <color name="color_primary_varient">#FFFFFFFF</color>
+    <color name="color_primary_variant">#FFFFFFFF</color>
     <color name="color_secondary">#AAAAAA</color>
     <color name="color_black">#FF000000</color>
     <color name="color_white">#FFFFFFFF</color>
@@ -11,4 +11,6 @@
     <color name="color_blue">#309FF8</color>
     <color name="color_gray">#BCBCBC</color>
     <color name="color_trans_50">#80FFFFFF</color>
+    <color name="color_trans_30_variant">#4D000000</color>
+    <color name="color_background_text_box">#535353</color>
 </resources>

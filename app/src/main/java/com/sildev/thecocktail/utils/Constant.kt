@@ -18,4 +18,6 @@ object Constant {
     const val EXTRA_CATEGORY_DATA_KEY = "EXTRA_DRINK_DATA_KEY"
     const val EMPTY_STRING = " "
     const val SPAN_COUNT_CATEGORY = 2
+    const val VIETNAMESE_LANGUAGE_CODE = "vi"
+    const val ENGLISH_LANGUAGE_CODE = "en"
 }

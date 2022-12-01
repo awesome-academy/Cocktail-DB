@@ -14,6 +14,7 @@ class SplashActivity : AppCompatActivity() {
         Timer().schedule(object : TimerTask() {
             override fun run() {
                 startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                finish()
             }
 
         }, Constant.TIME_DELAY_SPLASH)

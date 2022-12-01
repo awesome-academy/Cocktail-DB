@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    tools:context=".ui.setting.SettingFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_night_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20dp"
+        android:background="?selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/night_mode"
+            android:textColor="@color/color_text_icon"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switch_night_mode"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_weight="0"
+            android:clickable="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20dp"
+        android:background="?selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_night_mode">
+
+        <TextView
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?selectableItemBackground"
+            android:text="@string/language"
+            android:textColor="@color/color_text_icon"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_language"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?selectableItemBackground"
+            android:textAlignment="textEnd"
+            android:textColor="@color/color_text_icon"
+            android:textSize="@dimen/text_size_title" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@
         android:right="@dimen/_1dp">
         <shape android:shape="rectangle">
             <corners android:radius="@dimen/_20dp" />
-            <solid android:color="@color/color_background_textbox" />
+            <solid android:color="@color/color_background_text_box" />
         </shape>
     </item>
 </layer-list>
