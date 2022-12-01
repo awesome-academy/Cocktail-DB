@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">The cocktail</string>
+    <string name="discovery">Khám phá</string>
+    <string name="setting">Cài đặt</string>
+    <string name="favourite">Yêu thích</string>
+    <string name="category">Thể loại</string>
+    <string name="search">Tìm kiếm…</string>
+    <string name="ingredients">Thành phần</string>
+    <string name="see_more">Xem thêm</string>
+    <string name="cocktail">Cocktail</string>
+    <string name="what_to_drink_today">Hôm nay uống gì?</string>
+    <string name="delete_search_history">Xóa lịch sử tìm kiếm</string>
+    <string name="question_delete">Bạn có muốn xóa lịch sử tìm kiếm?</string>
+    <string name="yes">Đồng ý</string>
+    <string name="empty">Trống</string>
+    <string name="cancel">Hủy</string>
+    <string name="type">Loại</string>
+    <string name="ingredient">Thành phần</string>
+    <string name="instructions">Hướng dẫn</string>
+    <string name="text_empty_favourite">Bạn chưa có đồ uống yêu thích \n Hãy vào chi tiết đồ uống và thêm vào danh sách yêu thích để dễ dàng truy cập</string>
+    <string name="text_no_favourite_drink">Không có đồ uống yêu thích</string>
+    <string name="night_mode">Chế độ tối</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="vietnamese">Tiếng Việt</string>
+    <string name="question_change_mode">Bạn có muốn thay đổi chế độ?</string>
+    <string name="question_change_language">Do you want change language to English?</string>
+    <string name="ok">Đồng ý</string>
+    <string name="internet_alert">Cảnh báo kết nối mạng</string>
+    <string name="message_internet_alert">Hãy kiểm tra kết nối mạng của bạn!</string>
+</resources>

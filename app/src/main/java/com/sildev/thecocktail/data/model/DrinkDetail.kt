@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName
 data class DrinkDetail(
     val idDrink: String,
     val strDrink: String,
-    val strDrinkAlternate: String,
     val strCategory: String,
     val strAlcoholic: String,
     val strInstructions: String,
@@ -88,7 +87,6 @@ data class DrinkDetail(
         return DrinkDetailCollapse(
             idDrink,
             strDrink,
-            strDrinkAlternate,
             strCategory,
             strAlcoholic,
             strInstructions,

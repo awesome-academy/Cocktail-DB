@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.DiffUtil
 data class DrinkDetailCollapse(
     val idDrink: String,
     val strDrink: String,
-    val strDrinkAlternate: String,
     val strCategory: String,
     val strAlcoholic: String,
     val strInstructions: String,

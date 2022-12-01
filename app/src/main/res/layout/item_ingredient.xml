@@ -11,7 +11,7 @@
         android:layout_height="@dimen/_80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:riv_border_color="@color/color_primary_varient"
+        app:riv_border_color="@color/color_primary_variant"
         app:riv_border_width="@dimen/_1dp"
         app:riv_corner_radius="@dimen/conner_radius_35" />
 
